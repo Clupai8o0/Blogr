@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	
+	<!-- StyleSheets  -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+
+	<!-- Font  -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Overpass&family=Ubuntu:wght@300&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet"> 
+
+	<!-- Title  -->
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<title>Frontend Mentor | [Blogr]</title>
+</head>
+<body>
+	<article class="flex flex-dir-col w-100 h-100">
+		<!-- Intro  -->
+		<section id="intro" class="w-100 intro_bg pv4 ph6 br-left-bottom h-auto">
+			<nav class="flex flex-dir-row flex-between">
+				<ul class="list flex flex-dir-row list-text">
+					<li>
+						<img src="images/logo.svg" alt="logo">
+					</li>
+					<li class="pointer ml4">
+						<p>Product <img src="images/icon-arrow-light.svg" alt="dropdown arrow" class="dim"></p>
+						<div class="hide-child absolute drop-pos">
+							<div class="child absolute pt4-con">
+								<div class="mv1 dim pointer overpass fw-100 f6">Overview</div>
+								<div class="mv1 dim pointer overpass fw-100 f6">Pricing</div>
+								<div class="mv1 dim pointer overpass fw-100 f6">Marketplace</div>
+								<div class="mv1 dim pointer overpass fw-100 f6">Features</div>
+								<div class="mv1 dim pointer overpass fw-100 f6">Integrations</div>
+							</div>
+						</div>
+					</li>
+					<li class="pointer">
+						<p>Company <img src="images/icon-arrow-light.svg" alt="dropdown arrow" class="dim"></p>
+						<div class="hide-child absolute drop-pos">
+							<div class="child absolute pt4-con">
+								<div class="mv1 dim pointer overpass fw-100 f6">About</div>
+								<div class="mv1 dim pointer overpass fw-100 f6">Team</div>
+								<div class="mv1 dim pointer overpass fw-100 f6">Blog</div>
+								<div class="mv1 dim pointer overpass fw-100 f6">Carrers</div>
+							</div>
+						</div>
+					</li>
+					<li class="pointer">
+						<p>Connect <img src="images/icon-arrow-light.svg" alt="dropdown arrow" class="dim"></p>
+						<div class="hide-child absolute drop-pos">
+							<div class="child absolute pt4-con">
+								<div class="mv1 dim pointer overpass fw-100 f6">Contact</div>
+								<div class="mv1 dim pointer overpass fw-100 f6">Newsletter</div>
+								<div class="mv1 dim pointer overpass fw-100 f6">LinkedIn</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div>
+					<ul class="list flex flex-dir-row list-text">
+						<li class="pointer dim">
+							<p>Login</p>
+						</li>
+						<li class="">
+							<button class="dim pointer no-underline br-pill ph4 pv2 mb2 dib bg-white signup-btn" >
+								Sign Up
+							</button>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="flex flex-center flex-dir-col mv5">
+				<div class="white flex flex-center flex-dir-col intro-heading mv3">
+					<p class="f1-con">A modern publishing platform</p>
+					<p class="f4-con fw-200">Grow your audience and build your online brand</p>
+				</div>
+				<div class="mv3">
+					<button class="dim pointer no-underline br-pill ph3 pv2 mb2 dib bg-white signup-btn mh2">
+						Start For Free
+					</button>
+					<a class="f6 link dim br-pill ba ph3 pv2 mb2 dib white mhv signup-btn" href="#0">Learn more</a>
+				</div>
+			</div>
+		</section>
+		<!-- Intro End  -->
+
+		<!-- Info 1 -->
+		<section id="info_1" class="w-100 flex flex-dir-col flex-center ubuntu pv5 ph6">
+			<!-- heading  -->
+			<div class="flex flex-center font-dark-blue f2 fw-400">
+				<p>Designed for the future</p>
+			</div> 
+
+			<!-- body  -->
+			<div class="flex flex-dir-row">
+				<!-- details  -->
+				<div class="w-50">
+					<!-- Text 1 -->
+					<div class="mv5">
+						<!-- header  -->
+						<p class="font-dark-blue f3 fw-400">Introducing an extensible editor</p>
+						<!-- body  -->
+						<p class="overpass f6 lh-copy fw-100">
+							Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+							The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+							videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+							change the looks of a blog.
+						</p>
+					</div>
+
+					<!-- Text 2 -->
+					<div class="mv4">
+						<!-- header  -->
+						<p class="font-dark-blue f3 fw-400">Robust content management</p>
+						<!-- body  -->
+						<p class="overpass f6 lh-copy fw-100">
+							Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+							by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+						</p>
+					</div>
+				</div>
+
+				<!-- imgs  -->
+				<div class="w-50">
+					<img src="images/illustration-editor-desktop.svg" alt="editor desktop illustration" class="relative edi">
+				</div>
+			</div>
+		</section>
+		<!-- Info 1 End  -->
+
+		<!-- Info 2  -->
+		<section id="info_2" class="w-100 body_bg flex flex-dir-row pv5 ph5 br-left-right">
+			<!-- Img  -->
+			<div class="w-50 i-phones">
+				<!-- <img src="images/illustration-phones.svg" class="relative z-999 w-100 h-auto"> -->
+			</div>
+
+			<!-- Details  -->
+			<div class="w-50">
+				<!-- header  -->
+				<p class="white f3 fw-400 ubuntu">State of the Art Infrastructure</p>
+				<!-- body  -->
+				<p class="overpass f6 lh-copy fw-100 white">
+					With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+					This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+				</p>
+			</div>
+		</section>
+		<!-- Info 2 end  -->
+
+		<!-- Info 3 -->
+		<section id="info_5" class="w-100 flex flex-center ubuntu pv5 ph6 mv5">
+			<!-- body  -->
+			<div class="flex flex-dir-row pv6">
+				<!-- imgs  -->
+				<div class="w-50 edi_2">
+					<!-- <img src="images/illustration-laptop-desktop.svg" alt="editor desktop illustration" class="relative edi_2"> -->
+				</div>
+				<!-- details  -->
+				<div class="w-50 ph4">
+					<!-- Text 1 -->
+					<div class="mv5">
+						<!-- header  -->
+						<p class="font-dark-blue f3 fw-400">Free, open, simple</p>
+						<!-- body  -->
+						<p class="overpass f6 lh-copy fw-100">
+							Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+							features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+							and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+						</p>
+					</div>
+
+					<!-- Text 2 -->
+					<div class="mv4">
+						<!-- header  -->
+						<p class="font-dark-blue f3 fw-400">Powerful tooling</p>
+						<!-- body  -->
+						<p class="overpass f6 lh-copy fw-100">
+							Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+							capable of producing even the most complicated sites.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Info 3 end  -->
+
+		<section id="footer" class="w-100 footer_bg flex flex-dir-row ph6 pv4 br-right-top">
+			<!-- Logo  -->
+			<div class="w-25 pv4">
+				<img src="images/logo.svg" alt="logo">
+			</div>
+
+			<!-- Product  -->
+			<div class="w-25">
+				<p class="f4 fw-400 ubuntu white pl4">Product</p>
+				<ul class="list flex flex-dir-col list-text f5 overpass f6 lh-copy fw-100">
+					<li class="mv1 pointer dim">Overview</li>
+					<li class="mv1 pointer dim">Pricing</li>
+					<li class="mv1 pointer dim">Marketplace</li>
+					<li class="mv1 pointer dim">Features</li>
+					<li class="mv1 pointer dim">Integrations</li>
+				</ul>
+			</div>
+
+			<!-- Company  -->
+			<div class="w-25">
+				<p class="f4 fw-400 ubuntu white pl4">Company</p>
+				<ul class="list flex flex-dir-col list-text f5 overpass f6 lh-copy fw-100">
+					<li class="mv1 pointer dim">About</li>
+					<li class="mv1 pointer dim">Team</li>
+					<li class="mv1 pointer dim">Blog</li>
+					<li class="mv1 pointer dim">Careers</li>
+				</ul>
+			</div>
+
+			<!-- Connect  -->
+			<div class="w-25">
+				<p class="f4 fw-400 ubuntu white pl4">Connect</p>
+				<ul class="list flex flex-dir-col list-text f5 overpass f6 lh-copy fw-100">
+					<li class="mv1 pointer dim">Contact</li>
+					<li class="mv1 pointer dim">Newsletter</li>
+					<li class="mv1 pointer dim">LinkedIn</li>
+				</ul>
+			</div>
+
+		</section>
+	</article>
+
+	<!-- <div class="attribution">
+		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+		Coded by <a href="#">Clupai8o0c</a>.
+	</div> -->
+</body>
+</html>

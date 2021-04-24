@@ -1,0 +1,200 @@
+/* Main  */
+/* Varibles */
+    :root{
+        /* Primary */
+        --light_red_CTA: hsl(356, 100%, 66%);
+        --very_light_red_CTA_hover: hsl(355, 100%, 74%);
+        --very_dark_blue: hsl(208, 49%, 24%);
+
+        /* Neutral */
+        --white_text: hsl(0, 0%, 100%);
+        --grayish_blue_footer_text: hsl(240, 2%, 79%);
+        --very_dark_grayish_blue_body: hsl(207, 13%, 34%);
+        --very_dark_black_blue_footer_background: hsl(240, 10%, 16%);
+
+        /* Intro Gradient colors */
+        --very_light_red: hsl(13, 100%, 72%);
+        --light_red: hsl(353, 100%, 62%);
+
+        /* body gradient  */
+        --very_dark_gray_blue: hsl(237, 17%, 21%);
+        --very_dark_desaturated_blue: hsl(237, 23%, 32%);
+    }
+    body{
+        overflow-x: hidden;
+    }
+    article{
+        width: 100vw;
+        height: auto;
+    }
+    li{
+        margin: 0 10px;
+    }
+/* Main  */
+
+/* Custom CSS */
+    .f3-con{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    .f4-con{
+        font-size: 1.4vw;
+        margin: 0;
+    }
+    .f5{
+        font-size: 16px;
+        margin: 0;
+    }
+    .f6{
+        font-size: 14px;
+        margin: 0;
+    }
+    .f1-con{
+        font-size: 3.2vw;
+        margin: 0;
+    }
+    .fw-200{
+        font-weight: 100;
+    }
+
+    .inline-block{
+        display: inline-block;
+    }
+
+    .flex-center{
+        justify-content: center;
+        align-items: center;
+    }
+    .flex-between{
+        justify-content: space-between;
+    }
+    .flex-dir-col{
+        flex-direction: column;
+    }
+    .flex-dir-row{
+        flex-direction: row;
+    }
+
+    .intro_bg{
+        background: linear-gradient(90deg, var(--very_light_red), var(--light_red));
+    }
+    .body_bg{
+        background: linear-gradient(90deg, var(--very_dark_gray_blue), var(--very_dark_desaturated_blue));
+    }
+    .footer_bg{
+        background-color: var(--very_dark_black_blue_footer_background);
+    }
+
+    .br-left-bottom{
+        border-radius: 0 0 0 3rem;
+    }
+    .br-right-top{
+        border-radius: 0 3rem 0 0;
+    }
+    .br-left-right{
+        border-radius: 0 3rem 0 3rem;
+    }
+
+    .list-text{
+        font-family: 'Overpass', sans-serif;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    /* Fonts  */
+        .ubuntu{
+            font-family: 'Ubuntu', sans-serif;;
+        }
+        .overpass{
+            font-family: 'Overpass', sans-serif;
+        }
+
+        .font-dark-blue{
+            color: var(--very_dark_blue)
+        }
+
+        .fw-100{
+            font-weight: 100;
+        }
+        .fw-200{
+            font-weight: 200;
+        }
+        .fw-300{
+            font-weight: 300;
+        }
+        .fw-400{
+            font-weight: 400;
+        }
+        .fw-500{
+            font-weight: 500;
+        }
+        .fw-600{
+            font-weight: 600;
+        }
+        
+        .pt4-con{
+            padding-top: 2.5rem;
+        }
+    /* Fonts  */
+/* Custom CSS */
+
+/* Section  */
+    /* Intro section  */
+        .signup-btn{
+            font-family: 'Ubuntu', sans-serif;
+            border: 3px white solid;
+            color: var(--light_red_CTA);
+            font-weight: 500;
+            font-size: 16px;
+        }
+        .intro-heading{
+            font-family: 'Overpass', sans-serif;
+        }
+        /* .intro_bg::before{
+            display: inline-flex;
+            content: '';
+            background-image: url('./images/bg-pattern-intro.svg');
+            background-size: 2000px 2000px;
+            width: 2000px;
+            height: 2000px;
+            position: absolute;
+            z-index: 0;
+        } */
+
+        .drop-pos{
+            top: 48px;
+        }
+    /* Intro section  */
+
+    /* Info 1 */
+        .edi{
+            left: 15vw;
+            width: 80vw;
+            height: auto;
+        }
+    /* Info 1 */
+
+    /* Info 2 */
+        .i-phones::after{
+            content: url(./images/illustration-phones.svg);
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 175vh;
+            z-index: 20;
+        }
+    /* Info 2 */
+
+    /* Info 3 */
+        .edi_2::after{
+            content: url(./images/illustration-laptop-desktop.svg);
+            width: 100%;
+            height: auto;
+            position: absolute;
+            right: 20vw;
+            top: 255vh;
+            z-index: 2;
+        }
+    /* Info 3 */
+/* Section  */
