@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 	
 	<!-- StyleSheets  -->
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style2.css">
 	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
 
 	<!-- Font  -->
@@ -20,19 +20,19 @@
 	<title>Frontend Mentor | [Blogr]</title>
 </head>
 <body>
-	<article class="flex flex-dir-col w-100 h-100">
-		<!-- Intro  -->
-		<section id="intro" class="w-100 intro_bg pv4 ph6 br-left-bottom h-auto">
+	<article class="flex flex-dir-col flex-center">
+        <!-- Intro  -->
+        <section id="intro" class="w-100 intro_bg pa-intro br-left-bottom h-auto shadow-4">
 			<nav class="flex flex-dir-row flex-between">
 				<ul class="list flex flex-dir-row list-text">
-					<li>
-						<img src="images/logo.svg" alt="logo">
+					<li class="ma0">
+						<img src="images/logo.svg" alt="logo" class="ma0 pa0 w-100 h-auto">
 					</li>
-					<li class="pointer ml4">
+					<li class="pointer ml4 af-width">
 						<p>Product <img src="images/icon-arrow-light.svg" alt="dropdown arrow" class="dim"></p>
 						<div class="hide-child absolute drop-pos">
 							<div class="child absolute pt4-con">
-								<div class="mv1 dim pointer overpass fw-100 f6">Overview</div>
+								<div class="mv1 dim pointer overpass fw-100 f6-con">Overview</div>
 								<div class="mv1 dim pointer overpass fw-100 f6">Pricing</div>
 								<div class="mv1 dim pointer overpass fw-100 f6">Marketplace</div>
 								<div class="mv1 dim pointer overpass fw-100 f6">Features</div>
@@ -40,7 +40,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="pointer">
+					<li class="pointer af-width">
 						<p>Company <img src="images/icon-arrow-light.svg" alt="dropdown arrow" class="dim"></p>
 						<div class="hide-child absolute drop-pos">
 							<div class="child absolute pt4-con">
@@ -51,7 +51,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="pointer">
+					<li class="pointer af-width">
 						<p>Connect <img src="images/icon-arrow-light.svg" alt="dropdown arrow" class="dim"></p>
 						<div class="hide-child absolute drop-pos">
 							<div class="child absolute pt4-con">
@@ -62,17 +62,18 @@
 						</div>
 					</li>
 				</ul>
-				<div>
-					<ul class="list flex flex-dir-row list-text">
-						<li class="pointer dim">
+				<div id="burger" class="flex flex-center">
+					<ul class="list flex flex-dir-row list-text af-width">
+						<li class="pointer dim af-width">
 							<p>Login</p>
 						</li>
-						<li class="">
-							<button class="dim pointer no-underline br-pill ph4 pv2 mb2 dib bg-white signup-btn" >
+						<li class="af-width">
+							<button class="dim pointer no-underline br-pill ph4 pv2 mb2 dib bg-white signup-btn font-red" >
 								Sign Up
 							</button>
 						</li>
 					</ul>
+					<img src="images/icon-hamburger.svg" alt="hamburger" class="pointer hamburger" onclick="menuOn()">
 				</div>
 			</nav>
 			<div class="flex flex-center flex-dir-col mv5">
@@ -81,30 +82,96 @@
 					<p class="f4-con fw-200">Grow your audience and build your online brand</p>
 				</div>
 				<div class="mv3">
-					<button class="dim pointer no-underline br-pill ph3 pv2 mb2 dib bg-white signup-btn mh2">
+					<button class="dim pointer no-underline br-pill ph3 pv2 mb2 dib bg-white signup-btn mh2 font-red">
 						Start For Free
 					</button>
 					<a class="f6 link dim br-pill ba ph3 pv2 mb2 dib white mhv signup-btn" href="#0">Learn more</a>
 				</div>
 			</div>
-		</section>
-		<!-- Intro End  -->
+        </section>
+        <!-- Intro end  -->
+
+		<!-- Menu  -->
+		<div class="ph4 pt3 pb4 menu shadow-4 br4 mt3 bg-white deactivate">
+			<img src="images/icon-close.svg" alt="close button" class="cl-btn pointer" onclick="menuOff()">
+			<div>
+				<!-- Product  -->
+				<div class="mb4 mt3">
+					<p class="overpass fw-400 f4-con font-dark-blue pointer dim" onClick="dropdown('product')" id="prd">
+						Product <img src="images/icon-arrow-dark.svg" alt="dropdown arrow" class="dim" id="i-prd">
+					</p>
+					<div class="deactivate" id="drp-product">
+						<div class="drpdw br2 flex flex-center pv3-con flex-dir-col">
+							<p class="font-dark-blue overpass f4-con fw-400 pointer dim">Overview</p>
+							<p class="font-dark-blue overpass f4-con fw-400 pointer dim">Pricing</p>
+							<p class="font-dark-blue overpass f4-con fw-400 pointer dim">Marketplace</p>
+							<p class="font-dark-blue overpass f4-con fw-400 pointer dim">Features</p>
+							<p class="font-dark-blue overpass f4-con fw-400 pointer dim">Integrations</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Company -->
+				<div class="mv4">
+					<p class="overpass fw-400 f4-con font-dark-blue pointer dim" onClick="dropdown('company')" id="com">
+						Company <img src="images/icon-arrow-dark.svg" alt="dropdown arrow" class="dim" id="i-com">
+					</p>
+					<div class="deactivate" id="drp-company">
+						<div class="drpdw br2 flex flex-center pv3-con flex-dir-col">
+							<p class="font-dark-blue overpass f4-con fw-400 pointer dim">About</p>
+							<p class="font-dark-blue overpass f4-con fw-400 pointer dim">Team</p>
+							<p class="font-dark-blue overpass f4-con fw-400 pointer dim">Blog</p>
+							<p class="font-dark-blue overpass f4-con fw-400 pointer dim">Carrers</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Connect  -->
+				<div class="mt4 mb3">
+					<p class="overpass fw-400 f4-con font-dark-blue pointer dim" onClick="dropdown('connect')" id="conn">
+						Connect <img src="images/icon-arrow-dark.svg" alt="dropdown arrow" class="dim" id="i-conn">
+					</p>
+					<div class="deactivate" id="drp-connect">
+						<div class="drpdw br2 flex flex-center pv3-con flex-dir-col">
+							<p class="font-dark-blue overpass f4-con fw-400 pointer dim">Contact</p>
+							<p class="font-dark-blue overpass f4-con fw-400 pointer dim">Newsletter</p>
+							<p class="font-dark-blue overpass f4-con fw-400 pointer dim">LinkedIn</p>
+						</div>
+					</div>
+				</div>
+
+				<hr class="w-80">
+			</div>
+			<div id="" class="flex flex-center w-100">
+				<ul class="list flex flex-dir-col list-text w-100 mt0 mb0 pl0">
+					<li class="pointer dim font-dark-blue center overpass fw-400 f4-con mv0 w-100">
+						<p>Login</p>
+					</li>
+					<li class="w-100 flex flex-center mh0">
+						<button class="dim pointer no-underline br-pill ph4 pv3 dib intro_bg white signup-btn" >
+							Sign Up
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>	
+		<!-- Menu end  -->
 
 		<!-- Info 1 -->
-		<section id="info_1" class="w-100 flex flex-dir-col flex-center ubuntu pv5 ph6">
+		<section id="info_1" class="w-100 flex flex-dir-col flex-center ubuntu pv5 ph6-con mv6-con ">
 			<!-- heading  -->
-			<div class="flex flex-center font-dark-blue f2 fw-400">
+			<div class="flex flex-center font-dark-blue f2-con fw-400">
 				<p>Designed for the future</p>
 			</div> 
 
 			<!-- body  -->
-			<div class="flex flex-dir-row">
+			<div class="flex flex-dir-row-responsive-reverse">
 				<!-- details  -->
-				<div class="w-50">
+				<div class="w-50-con">
 					<!-- Text 1 -->
-					<div class="mv5">
+					<div class="mv5-con details">
 						<!-- header  -->
-						<p class="font-dark-blue f3 fw-400">Introducing an extensible editor</p>
+						<p class="font-dark-blue f3-con fw-400">Introducing an extensible editor</p>
 						<!-- body  -->
 						<p class="overpass f6 lh-copy fw-100">
 							Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
@@ -115,9 +182,9 @@
 					</div>
 
 					<!-- Text 2 -->
-					<div class="mv4">
+					<div class="mv4 details">
 						<!-- header  -->
-						<p class="font-dark-blue f3 fw-400">Robust content management</p>
+						<p class="font-dark-blue f3-con fw-400">Robust content management</p>
 						<!-- body  -->
 						<p class="overpass f6 lh-copy fw-100">
 							Flexible content management enables users to easily move through posts. Increase the usability of your blog 
@@ -127,24 +194,24 @@
 				</div>
 
 				<!-- imgs  -->
-				<div class="w-50">
-					<img src="images/illustration-editor-desktop.svg" alt="editor desktop illustration" class="relative edi">
+				<div class="w-50 ied">
+					<!-- <img src="images/illustration-editor-desktop.svg" alt="editor desktop illustration" class="relative edi"> -->
 				</div>
 			</div>
 		</section>
 		<!-- Info 1 End  -->
 
 		<!-- Info 2  -->
-		<section id="info_2" class="w-100 body_bg flex flex-dir-row pv5 ph5 br-left-right">
+		<section id="info_2" class="w-100 body_bg flex flex-dir-row-responsive pb5 ph5 br-left-right shadow-4 pt6-resp">
 			<!-- Img  -->
-			<div class="w-50 i-phones">
+			<div class="w-50 h-25 i-phones">
 				<!-- <img src="images/illustration-phones.svg" class="relative z-999 w-100 h-auto"> -->
 			</div>
 
 			<!-- Details  -->
-			<div class="w-50">
+			<div class="w-50-con mv4-con details">
 				<!-- header  -->
-				<p class="white f3 fw-400 ubuntu">State of the Art Infrastructure</p>
+				<p class="white f3-con fw-400 ubuntu">State of the Art Infrastructure</p>
 				<!-- body  -->
 				<p class="overpass f6 lh-copy fw-100 white">
 					With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
@@ -155,15 +222,15 @@
 		<!-- Info 2 end  -->
 
 		<!-- Info 3 -->
-		<section id="info_5" class="w-100 flex flex-center ubuntu pv5 ph6 mv5">
+		<section id="info_5" class="w-100 flex flex-center ubuntu pb5 pt6 ph6-con mv5">
 			<!-- body  -->
-			<div class="flex flex-dir-row pv6">
+			<div class="flex flex-dir-row-responsive pv6">
 				<!-- imgs  -->
 				<div class="w-50 edi_2">
 					<!-- <img src="images/illustration-laptop-desktop.svg" alt="editor desktop illustration" class="relative edi_2"> -->
 				</div>
 				<!-- details  -->
-				<div class="w-50 ph4">
+				<div class="w-50-con ph4-con detail">
 					<!-- Text 1 -->
 					<div class="mv5">
 						<!-- header  -->
@@ -191,14 +258,14 @@
 		</section>
 		<!-- Info 3 end  -->
 
-		<section id="footer" class="w-100 footer_bg flex flex-dir-row ph6 pv4 br-right-top">
+		<section id="footer" class="w-100 footer_bg flex flex-dir-row-responsive ph6 pv4 br-right-top">
 			<!-- Logo  -->
-			<div class="w-25 pv4">
+			<div class="w-25-con pv4 flex flex-center">
 				<img src="images/logo.svg" alt="logo">
 			</div>
 
 			<!-- Product  -->
-			<div class="w-25">
+			<div class="w-25-con">
 				<p class="f4 fw-400 ubuntu white pl4">Product</p>
 				<ul class="list flex flex-dir-col list-text f5 overpass f6 lh-copy fw-100">
 					<li class="mv1 pointer dim">Overview</li>
@@ -210,7 +277,7 @@
 			</div>
 
 			<!-- Company  -->
-			<div class="w-25">
+			<div class="w-25-con">
 				<p class="f4 fw-400 ubuntu white pl4">Company</p>
 				<ul class="list flex flex-dir-col list-text f5 overpass f6 lh-copy fw-100">
 					<li class="mv1 pointer dim">About</li>
@@ -221,7 +288,7 @@
 			</div>
 
 			<!-- Connect  -->
-			<div class="w-25">
+			<div class="w-25-con">
 				<p class="f4 fw-400 ubuntu white pl4">Connect</p>
 				<ul class="list flex flex-dir-col list-text f5 overpass f6 lh-copy fw-100">
 					<li class="mv1 pointer dim">Contact</li>
@@ -231,11 +298,8 @@
 			</div>
 
 		</section>
-	</article>
-
-	<!-- <div class="attribution">
-		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-		Coded by <a href="#">Clupai8o0c</a>.
-	</div> -->
+    </article>
+	<script src="script.js"></script>
+	<script src="script2.js"></script>
 </body>
 </html>
